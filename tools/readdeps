@@ -1,0 +1,5 @@
+for item in $(<"$1.d" cut -d: -f2); do
+  if echo "$item" | grep -q '.h$'; then
+    echo "${item%%.h}.o"
+  fi
+done | grep -v "$1.o" | sort | uniq
