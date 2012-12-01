@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "iso8601.h"
 
-char stamp[TIMESTAMP];
+static char stamp[TIMESTAMP];
 
 int main()
 {
