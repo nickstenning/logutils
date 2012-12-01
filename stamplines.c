@@ -30,9 +30,10 @@ int main()
   int c;
 
   for (;;) {
-    // We get the first character of each line separately, and calculate the
-    // timestamp when the first character is received, rather than waiting for
-    // the whole line.
+    /* We get the first character of each line separately, and calculate the
+     * timestamp when the first character is received, rather than waiting for
+     * the whole line.
+     */
     c = getc(stdin);
 
     if (feof(stdin)) {
@@ -46,8 +47,9 @@ int main()
       continue;
     }
 
-    // We've now printed the timestamp, a space, and the first character of
-    // the line. Pipe the rest straight through.
+    /* We've now printed the timestamp, a space, and the first character of
+     * the line. Pipe the rest straight through.
+     */
     pipe_until_eol(stdin, stdout);
 
     if (feof(stdin)) {
