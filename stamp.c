@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "iso8601.h"
 
-static char stamp[TIMESTAMP];
-
 int main()
 {
+  char stamp[TIMESTAMP];
+
   timestamp(stamp);
   puts(stamp);
   return 0;
