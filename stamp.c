@@ -3,9 +3,9 @@
 
 int main()
 {
-  char stamp[TIMESTAMP];
+	char stamp[TIMESTAMP];
 
-  timestamp(stamp);
-  puts(stamp);
-  return 0;
+	timestamp(stamp);
+	puts(stamp);
+	return 0;
 }

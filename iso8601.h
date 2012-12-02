@@ -3,6 +3,6 @@
 
 #define TIMESTAMP 29
 
-void timestamp (char s[]);
+void timestamp(char s[]);
 
 #endif
