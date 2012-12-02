@@ -5,7 +5,7 @@
 
 #define LINEBUF 2048
 
-char stamp[TIMESTAMP];
+static char stamp[TIMESTAMP];
 
 void printstamp (FILE* f) {
   timestamp(stamp);
@@ -41,11 +41,7 @@ int main()
     }
 
     printstamp(stdout);
-    putc(c, stdout);
-
-    if (c == '\n') {
-      continue;
-    }
+    ungetc(c, stdin);
 
     /* We've now printed the timestamp, a space, and the first character of
      * the line. Pipe the rest straight through.
