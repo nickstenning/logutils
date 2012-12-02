@@ -1,1 +1,1 @@
-cc -O2 -Wall -Wextra -Werror -pedantic-errors -MMD -MF $2.d -o $3 -c $2.c
+cc $CFLAGS -O2 -Wall -Wextra -Werror -pedantic-errors -MMD -MF "$2.d" -o "$3" -c "$2.c"
