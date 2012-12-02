@@ -8,6 +8,7 @@ So far:
 - `stamp`: print an accurate timestamp in ISO8601 format
 - `stamplines`: prefix each input line with an accurate timestamp in ISO8601 format 
 - `tagalog`: convert log data into a stream of tagged JSON documents (tagging yet to be implemented)
+- `logatag`: convert a stream of JSON documents into a stream of log data (python prototype)
 
 Build
 -----

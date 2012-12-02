@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
+import json
+import sys
+
+def print_doc(doc):
+    print(u'{timestamp} {message}'.format(**doc), end='')
+
+def main():
+    in_frag = False
+
+    for line in sys.stdin:
+        doc = json.loads(line)
+
+        if in_frag:
+            if 'fragmentId' in doc:
+                print(doc['message'], end='')
+            else:
+                in_frag = False
+                print_doc(doc)
+        else:
+            if 'fragmentId' in doc:
+                in_frag = True
+            print_doc(doc)
+
+
+if __name__ == '__main__':
+    main()

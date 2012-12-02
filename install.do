@@ -9,3 +9,5 @@ fi
   redo-ifchange "$bin"
   install -m 755 "$bin" "${PREFIX}/bin"
 done
+
+install -m 755 logatag "${PREFIX}/bin"
