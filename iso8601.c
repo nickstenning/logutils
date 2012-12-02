@@ -14,7 +14,7 @@ void timestamp (char s[]) {
      * implement portable nanosecond accuracy.
      */
     strftime(s, TIMESTAMP - 9, "%Y-%m-%dT%H:%M:%S.", tm);
-    snprintf(&s[TIMESTAMP - 10], 9, "%06u000", tv.tv_usec);
+    snprintf(&s[TIMESTAMP - 9], 10, "%06u000", tv.tv_usec);
   }
 }
 
